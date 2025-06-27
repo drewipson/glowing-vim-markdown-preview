@@ -32,6 +32,9 @@ function! ToggleMarkdownPreview()
     execute 'rightbelow vertical terminal glow -s dark -w ' . (l:width - 4) . ' ' . l:temp_file
     execute 'vertical resize ' . l:width
     
+    " Position cursor at top after glow completes rendering
+    call timer_start(500, {-> feedkeys("\<C-\>\<C-n>gg")})
+    
     " Clean up temp file after delay
     call timer_start(2000, {-> delete(l:temp_file)})
   else
@@ -77,4 +80,4 @@ augroup END
 
 " Command and mapping
 command! MarkdownPreviewToggle call ToggleMarkdownPreview()
-nnoremap \m :MarkdownPreviewToggle<CR>
+nnoremap mp :MarkdownPreviewToggle<CR>
