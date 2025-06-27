@@ -40,26 +40,7 @@ pacman -S glow
 go install github.com/charmbracelet/glow@latest
 ```
 
-#### Windows
-```powershell
-# Using winget
-winget install charmbracelet.glow
-
-# Using scoop
-scoop install glow
-```
-
 ### 2. Install the plugin
-
-#### Using vim-plug
-```vim
-Plug 'yourusername/glowing-vim-markdown-preview'
-```
-
-#### Using Vundle
-```vim
-Plugin 'yourusername/glowing-vim-markdown-preview'
-```
 
 #### Manual installation
 Copy `markdown-preview.vim` to your Vim plugin directory:
@@ -74,7 +55,7 @@ cp markdown-preview.vim ~/.config/nvim/plugin/
 ## Usage
 
 ### Default Key Mapping
-- `\m` - Toggle markdown preview on/off
+- `\mp` - Toggle markdown preview on/off
 
 ### Commands
 - `:MarkdownPreviewToggle` - Toggle the markdown preview
@@ -85,10 +66,10 @@ cp markdown-preview.vim ~/.config/nvim/plugin/
 ## How It Works
 
 1. **Open a markdown file** in Vim
-2. **Press `\m`** to open the preview in a vertical split
+2. **Press `\mp`** to open the preview in a vertical split
 3. **The preview renders** your current buffer content using glow
 4. **Press `q`** in the preview window to close it
-5. **Toggle again** with `\m` to reopen with updated content
+5. **Toggle again** with `\mp` to reopen with updated content
 
 ## Configuration
 
@@ -96,7 +77,7 @@ The plugin works out of the box, but you can customize the key mapping if desire
 
 ```vim
 " Use a different key mapping (example: <Leader>p)
-nnoremap <Leader>p :MarkdownPreviewToggle<CR>
+nnoremap <Leader>mp :MarkdownPreviewToggle<CR>
 ```
 
 ## Examples
@@ -134,14 +115,8 @@ Inline math: $\sum_{i=1}^{n} x_i = x_1 + x_2 + \cdots + x_n$
 ```
 
 ### Mermaid Diagrams
-```mermaid
-graph TD
-    A[Start] --> B{Is it working?}
-    B -->|Yes| C[Great!]
-    B -->|No| D[Debug]
-    D --> B
-    C --> E[Deploy]
-```
+Mermaid diagrams are not supported *yet* by glow as they do not yet support rendering mermaid diagrams in ASCII. 
+You can ask glow to support this feature by upvoting this [issue](https://github.com/charmbracelet/glow/issues/342).
 
 ### Task Lists and Complex Lists
 - [x] Basic markdown rendering
