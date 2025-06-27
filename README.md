@@ -74,7 +74,7 @@ cp markdown-preview.vim ~/.config/nvim/plugin/
 ## Usage
 
 ### Default Key Mapping
-- `\m` - Toggle markdown preview on/off
+- `mp` - Toggle markdown preview on/off
 
 ### Commands
 - `:MarkdownPreviewToggle` - Toggle the markdown preview
@@ -85,10 +85,10 @@ cp markdown-preview.vim ~/.config/nvim/plugin/
 ## How It Works
 
 1. **Open a markdown file** in Vim
-2. **Press `\m`** to open the preview in a vertical split
+2. **Press `mp`** to open the preview in a vertical split
 3. **The preview renders** your current buffer content using glow
 4. **Press `q`** in the preview window to close it
-5. **Toggle again** with `\m` to reopen with updated content
+5. **Toggle again** with `mp` to reopen with updated content
 
 ## Configuration
 
