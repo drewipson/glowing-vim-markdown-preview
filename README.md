@@ -2,7 +2,7 @@
 
 A lightweight Vim plugin that provides markdown preview using [glow](https://github.com/charmbracelet/glow) - the glamorous command-line markdown renderer.
 
-![Glowing Vim Markdown Preview demo showing real-time markdown rendering with syntax highlighting](./glowing-markdown-preview.gif)
+![Glowing Vim Markdown Preview demo showing markdown rendering with syntax highlighting](./glowing-markdown-preview.gif)
 
 ## Why I Built This
 
@@ -15,8 +15,6 @@ I wanted to see my markdown rendered without leaving my terminal. So I built thi
 - **Toggle markdown preview** with a simple key mapping
 - **Beautiful rendering** powered by glow's terminal-based styling
 - **Split window layout** - preview opens in a vertical split
-- **Live preview** - renders your current buffer content
-- **No external dependencies** beyond glow
 - **Terminal-based** - works entirely within your terminal environment
 
 ## Requirements
