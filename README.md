@@ -2,6 +2,8 @@
 
 A lightweight Vim plugin that provides real-time markdown preview using [glow](https://github.com/charmbracelet/glow) - the glamorous command-line markdown renderer.
 
+![Alt Text]('./glowing-markdown-preview.gif')
+
 ## Features
 
 - **Toggle markdown preview** with a simple key mapping
