@@ -21,7 +21,7 @@ function! ToggleMarkdownPreview()
   
   " No preview found, create one
   let l:source_winnr = winnr()
-  let l:width = float2nr(&columns * 0.4)
+  let l:width = float2nr(&columns * 0.5)
   
   if executable('glow') && has('terminal')
     " Create terminal directly with glow
@@ -55,6 +55,25 @@ function! ToggleMarkdownPreview()
     tnoremap <buffer> q <C-\><C-n>:call ToggleMarkdownPreview()<CR>
   endif
 endfunction
+
+" Auto-resize preview when window is resized
+function! ResizeMarkdownPreview()
+  for winnr in range(1, winnr('$'))
+    if getwinvar(winnr, 'is_markdown_preview', 0)
+      let l:width = float2nr(&columns * 0.5)
+      execute winnr . 'wincmd w'
+      execute 'vertical resize ' . l:width
+      execute 'wincmd p'
+      return
+    endif
+  endfor
+endfunction
+
+" Set up auto-resize
+augroup MarkdownPreview
+  autocmd!
+  autocmd VimResized * call ResizeMarkdownPreview()
+augroup END
 
 " Command and mapping
 command! MarkdownPreviewToggle call ToggleMarkdownPreview()
