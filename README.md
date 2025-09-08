@@ -6,9 +6,9 @@ A lightweight Vim plugin that provides markdown preview using [glow](https://git
 
 ## Why I Built This
 
-I enjoy spending my time writing and working in Vim. Every time I wanted to see how it looked rendered, I had to break my concentration. Other plugins require spinning up Node servers and switching to a browser - which completely kills my focus when I'm deep in writing documentation.
+I enjoy spending my time writing and working in Vim. Every time I wanted to see how my markdown files looked rendered, I had to break my workflow to redner them. Other plugins require spinning up Node servers and switching to a browser - which completely kills my focus when I'm writing documentation.
 
-I wanted to see my markdown rendered without leaving my terminal. So I built this using glow, which renders beautiful markdown right in the terminal in a split view. Now I can toggle a preview, see exactly how my writing looks, and get back to work without losing my train of thought or changing windows.
+I wanted to see my markdown rendered without leaving my terminal. So I built this using glow, which renders beautiful markdown right in the terminal in a split view. You can toggle a preview, see exactly how your writing looks, and get back to work without losing any train of thought or changing windows.
 
 ## Features
 
